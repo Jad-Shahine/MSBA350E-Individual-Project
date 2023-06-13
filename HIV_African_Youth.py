@@ -364,6 +364,7 @@ elif selected_tab == "Demographic Prevalence":
     plt.legend()
 
     # Set the x-axis ticks to display every year
+    years1 = years1.astype(int).tolist()
     plt.xticks(years1)
 
     # Display the plot in Streamlit
