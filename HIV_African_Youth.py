@@ -400,8 +400,8 @@ elif selected_tab == "Children HIV Factors":
     plt.figure(figsize=(15, 8))
 
     # Create a line plot
-    plt.plot(PMTCT['Year'], PMTCT['New HIV Infections averted due to PMTCT'], color='green', label='New HIV Infections averted due to PMTCT')
-    plt.plot(PMTCT['Year'], PMTCT['New HIV Infections - children (aged 0-14) '], color='red', label='New HIV Infections - children')
+    plt.plot(PMTCT['Year'].values, PMTCT['New HIV Infections averted due to PMTCT'].values, color='green', label='New HIV Infections averted due to PMTCT')
+    plt.plot(PMTCT['Year'].values, PMTCT['New HIV Infections - children (aged 0-14) '].values, color='red', label='New HIV Infections - children')
 
     # Customize the plot
     plt.xlabel('Year')
