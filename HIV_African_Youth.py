@@ -382,7 +382,8 @@ elif selected_tab == "Children HIV Factors":
     # Plot the data
     mom_child.sort_values('TIME_PERIOD:Time period', inplace=True)
     fig, ax = plt.subplots()
-    ax.plot(mom_child["TIME_PERIOD:Time period"].values, mom_child["OBS_VALUE:Observation Value"].values, color='red')    ax.set_xlabel("Year", fontsize=6)
+    ax.plot(mom_child["TIME_PERIOD:Time period"].values, mom_child["OBS_VALUE:Observation Value"].values, color='red')    
+    ax.set_xlabel("Year", fontsize=6)
     ax.set_ylabel("Rate Per 100 HIV-Infected Women", fontsize=6)
     ax.set_title("Mother-to-child HIV transmission rate in Africa", fontsize=6)
     plt.xticks(range(min(mom_child['TIME_PERIOD:Time period']), max(mom_child['TIME_PERIOD:Time period']) + 1), fontsize=6)
