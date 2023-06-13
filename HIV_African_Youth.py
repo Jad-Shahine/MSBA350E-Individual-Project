@@ -341,14 +341,15 @@ elif selected_tab == "Demographic Prevalence":
     grouped_data4 = child_inf_rest.groupby("TIME_PERIOD:Time period")["OBS_VALUE:Observation Value"].sum()
 
     # Extract the years and summed rates
-    years1 = grouped_data1.index
-    summed_rates1 = grouped_data1.values
-    years2 = grouped_data2.index
-    summed_rates2 = grouped_data2.values
-    years3 = grouped_data3.index
-    summed_rates3 = grouped_data3.values
-    years4 = grouped_data4.index
-    summed_rates4 = grouped_data4.values
+    # Extract the years and summed rates
+    years1 = np.array(grouped_data1.index)
+    summed_rates1 = np.array(grouped_data1.values)
+    years2 = np.array(grouped_data2.index)
+    summed_rates2 = np.array(grouped_data2.values)
+    years3 = np.array(grouped_data3.index)
+    summed_rates3 = np.array(grouped_data3.values)
+    years4 = np.array(grouped_data4.index)
+    summed_rates4 = np.array(grouped_data4.values)
 
     # Set a larger figure size
     plt.figure(figsize=(15, 8))
